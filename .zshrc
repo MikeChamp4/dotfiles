@@ -48,13 +48,16 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Key biddings
-bindkey "^[[H" beginning-of-line
-bindkey "^[[F" end-of-line
-bindkey "^[[3~" delete-char
-bindkey "3~" delete-word
-bindkey "5~" delete-word
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
+bindkey "^[[H" beginning-of-line # HOME
+bindkey "^[[F" end-of-line # END
+bindkey "^[[3~" delete-char # DEL
+bindkey "5~" delete-word # CTR + DEL
+bindkey ";5C" forward-word # CTRL + ArrowRight
+bindkey ";5D" backward-word # CTRL + ArrowLeft
+bindkey "^H" backward-kill-word # CTRL
+# bindkey "3~" delete-word # ALT + DEL
+# bindkey "^[[1;3C" forward-word # ALT + ArrowRight
+# bindkey "^[[1;3D" backward-word # ALT + ArrowLeft
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
